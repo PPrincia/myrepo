@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SlideShow</title>
+	<link rel="stylesheet" type="text/css" href="slideshow.css">
+	<meta name="viewport" content="width=device=width, initial-scale=1">
+</head>
+<body class="body">
+
+	<div class="topnav">
+		<a class="active" href="">Home</a>
+		<a href="news">News</a>
+		<a href="contact">Contacts</a>
+		<a href="about">About us</a>
+	</div>
+
+<h1 class="header">Welcome to the home page</h1>
+
+	<p class="desc">
+		The Home page  page is commonly used as a way to provide customers <br> with more insight into who are involved with a given business and exactly what it does. <br> This page is often a reflection of the purpose and personality of the business and its owners or top employees.
+	</p>
+
+	<hr class="hr">
+
+	<img class="mySlides" src="shoes.jpg">
+	<img class="mySlides" src="girl.jpg">
+	<img class="mySlides" src="smile.jpg">
+	<button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+	<button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+	<hr class="hr">
+
+	<p class="desc">
+		The Home page  page is commonly used as a way to provide customers <br> with more insight into who are involved with a given business and exactly what it does. <br> This page is often a reflection of the purpose and personality of the business and its owners or top employees.
+	</p>
+	<script>
+	// 	var slideIndex = 1;
+	// showDivs(slideIndex);
+
+	// function plusDivs(n) {
+ //  		showDivs(slideIndex += n);
+	// }
+
+	// function showDivs(n) {
+ //  	var i;
+ //  	var x = document.getElementsByClassName("mySlides");
+ //  	if (n > x.length) {slideIndex = 1}
+ //  	if (n < 1) {slideIndex = x.length} ;
+ //  	for (i = 0; i < x.length; i++) {
+ //    	x[i].style.display = "none";
+ //  	}
+ // 		x[slideIndex-1].style.display = "block";
+	// }
+
+	var slideIndex = 0;
+	carousel();
+
+	function carousel() {
+  	var i;
+  	var x = document.getElementsByClassName("mySlides");
+  	for (i = 0; i < x.length; i++) {
+    	x[i].style.display = "none";
+  	}
+  	slideIndex++;
+  	if (slideIndex > x.length) {slideIndex = 1}
+  	x[slideIndex-1].style.display = "block";
+  	setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+	</script>
+</body>
+</html>
